@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Gyerek ruhák</title>
+	<style>
+		/* Stílusok */
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: #04eff7;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+		}
+		
+		section {
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		li {
+			margin: 20px;
+			width: 20%;
+			position: relative;
+		}
+		
+		img {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			border-radius: 10px;
+			transition: transform 0.2s;
+		}
+		
+		img:hover {
+			transform: scale(1.2);
+		}
+		
+		h3 {
+			margin-top: 0;
+		}
+		
+		button {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 10px;
+			cursor: pointer;
+			position: absolute;
+			top: 120px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		
+		button:hover {
+			background-color: #444;
+		}
+		
+		.meretek {
+			position: absolute;
+			top: 150px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #fff;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			display: none;
+		}
+		
+		.meretek ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.meretek li {
+			margin-bottom: 10px;
+		}
+		
+		.meretek a {
+			text-decoration: none;
+			color: #333;
+		}
+		
+		.meretek a:hover {
+			color: #444;
+		}
+		
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown-content a:hover {
+			background-color: #f1f1f1;
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown:hover .dropbtn {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Gyerek ruhák</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Gyerek ruhák</h2>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 1</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSRM132903NBLX-pdp-2.jpg?v=1727152355&width=700" alt="Product 2">
+				<h3>Termék 2</h3>
+				<p>Ár: $19.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSWM115905NBKX-pdp-2.jpg?v=1727152378&width=700" alt="Product 3">
+				<h3>Termék 3</h3>
+				<p>Ár: $5.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src=" https://int.bape.com/cdn/shop/files/0ZXSWM114013NBDX-pdp-2.jpg?v=1726728141&width=700" alt="Product 4">
+				<h3>Termék 4</h3>
+				<p>Ár: $7.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXTEM110305NBKX-pdp-2.jpg?v=1726728366&width=700" alt="Product 5">
+				<h3>Termék 5</h3>
+				<p>Ár: $12.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://tse3.mm.bing.net/th?id=OIP.N4mv3NOPkVM6Wr2cqwNgaAHaHa&pid=Api&P=0&h=220" alt="Product 6">
+				<h3>Termék 6</h3>
+				<p>Ár: $14.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://tse1.mm.bing.net/th?id=OIP.DmPxHztXRW6CzhcXJ8m-QgHaHa&pid=Api&P=0&h=220" alt="Product 7">
+				<h3>Termék 7</h3>
+				<p>Ár: $14.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://tse1.mm.bing.net/th?id=OIP.9oJSYqsrjYKK6PZZ4Jg9kwHaJ4&pid=Api&P=0&h=220" alt="Product 8">
+				<h3>Termék 8</h3>
+				<p>Ár: $16.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://tse4.mm.bing.net/th?id=OIP.Nez7IUXjPvs6fLSVS2UmuQAAAA&pid=Api&P=0&h=220" alt="Product 9">
+				<h3>Termék 9</h3>
+				<p>Ár: $11.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+ 						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://tse1.mm.bing.net/th?id=OIP.9oJSYqsrjYKK6PZZ4Jg9kwHaJ4&pid=Api&P=0&h=220" alt="Product 10">
+				<h3>Termék 10</h3>
+				<p>Ár: $16.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 1</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 11</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 12</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 13</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 14</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 15</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 16</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 17</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 18</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 19</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 20</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 21</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 22</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 23</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 24</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="termek">
+				<img src="https://int.bape.com/cdn/shop/files/0ZXSTM131009NBGX-pdp-2.jpg?v=1727422725&width=700" alt="Product 1">
+				<h3>Termék 25</h3>
+				<p>Ár: $10.99</p>
+				<button>Kosárba</button>
+				<div class="meretek">
+					<ul>
+						<li><a href="#">S</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
